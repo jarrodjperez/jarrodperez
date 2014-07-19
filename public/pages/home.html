@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="jumbotron text-center">
+	    <h2>Hi there, I'm Jarrod.</h2>
+	    <p>{{ message }}</p>
+    </div>
+    <div class="col col-md-4 skills">
+        <div class="content">
+            <div class="title">Skills</div>
+            
+            <div class="skills">
+                <div class="skill-collection" ng-repeat="skillObj in allSkills">
+                    <div class="type"><i class="fa {{skillObj.icon}}"></i> {{skillObj.name}}</div>
+                    <div class="type-skills" ng-repeat="skill in skillObj.skills">
+                        <i class="fa fa-angle-right"></i>  <span class="skill">{{skill}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-8 employment">
+        <div class="content">
+            <div class="title">Employment</div>
+            
+            <div class="jobs">
+                <div class="job" ng-repeat="job in jobs">
+                    <div class="company"><i class="fa fa-building-o"></i> {{job.company}}<span class="years">{{job.years}}</span></div>
+                    <div class="job-title"><em>{{job.title}}</em> <span class="location">{{job.location}}</span></div>
+                    <div class="comments" ng-repeat="comment in job.comments"><i class="fa fa-angle-right"></i> {{comment}}</div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="col col-md-8 education">
+        <div class="content">
+            <div class="title">Education</div>
+            
+            <div class="education">
+                <div class="school" ng-repeat="school in education">
+                    <div class="school"><i class="fa fa-graduation-cap"></i> {{school.school}}<span class="years">{{school.years}}</span></div>
+                    <div class="degree"><em>{{school.degree}}</em><span class="location">{{school.location}}</span> </div>
+                    <div class="major"><em>{{school.major}}</em></div>
+                    <div class="comments"><i class="fa fa-angle-right"></i> {{school.description}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

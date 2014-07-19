@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="myApp">
+
+    <head>
+        <title>Jarrod Perez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/flipclock.css" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,100,300' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/flipclock.js"></script>
+        <script src="script.js"></script>
+    </head>
+    
+    <!-- define angular controller -->
+    <body ng-controller="mainCtrl">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" ng-click="select()">JARROD PEREZ</a>
+                </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="javascript:(void);" class="dropdown-toggle" data-toggle="dropdown">PROJECTS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">Coming soon...</a></li>
+                            <!--<li class="dropdown-header">Angular</li>-->
+                            <!--<li><a href="#">Project 1</a></li>-->
+                            <!--<li><a href="#">Project 2</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li class="dropdown-header">D3</li>-->
+                            <!--<li><a href="#">Charts</a></li>-->
+                            <!--<li><a href="#">More charts</a></li>-->
+                        </ul>
+                    </li>
+                    <!--<li ng-repeat="link in links" ng-click="select(link)" ng-class="linkClass(link)">-->
+                    <!--    <a href="#{{link}}">{{link | uppercase}}</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <div ng-view></div>
+        </div>
+        
+        <footer class="text-center">
+            <p>
+                Created by: <a href="/">Jarrod Perez</a>
+                <span>&nbsp;&bull;&nbsp;</span>
+                Hosted by: <a href="http://nateferrero.com/">Nate Ferrero</a>
+                <span>&nbsp;&bull;&nbsp;</span>
+                Background by: <a href="http://subtlepatterns.com/">Subtle Patterns</a>
+            </p>
+            <div class="links">
+                <a ng-repeat="link in footerLinks" class="{{link.name}}" target="_blank" href="{{link.url}}">
+                    <i class="fa {{link.icon}}"></i>
+                </a> 
+            <div>
+        </footer>
+    </body>
+
+</html>

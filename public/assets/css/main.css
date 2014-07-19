@@ -1,0 +1,150 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  background: url("../images/grid_noise.png");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+p,
+div {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+a:hover {
+  color: #000;
+}
+.navbar-default {
+  background-color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #000;
+}
+.dropdown-menu > li> a:hover {
+  background: #000;
+}
+.container .main {
+  clear: both;
+  min-height: 1000px;
+}
+.container .main .jumbotron {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 70px 15px 30px 15px;
+  border-radius: 0;
+}
+.container .main .jumbotron .clock {
+  margin: 20px 0px 0px 130px;
+}
+.container .main .col.employment .fa-angle-right,
+.container .main .col.education .fa-angle-right {
+  font-size: 10px;
+}
+.container .main .col.employment .job {
+  margin-bottom: 10px;
+}
+.container .main .col.employment .job .company {
+  color: #000;
+  position: relative;
+}
+.container .main .col.education {
+  padding-top: 15px;
+}
+.container .main .col.education .school {
+  color: #000;
+}
+.container .main .col.skills {
+  padding-bottom: 15px;
+}
+.container .main .col.skills .skill-collection {
+  margin-bottom: 10px;
+}
+.container .main .col.skills .skill-collection .type {
+  color: #000;
+  text-transform: capitalize;
+}
+.container .main .col.skills .skill-collection .skill {
+  font-size: 13px;
+}
+.container .main .col.skills .skill-collection .fa {
+  font-size: 16px;
+}
+.container .main .col.skills .skill-collection .fa-angle-right {
+  font-size: 10px;
+}
+.container .main .col .content {
+  background: #fff;
+  padding: 10px;
+}
+.container .main .col .content .title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.container .main .col .content .type,
+.container .main .col .content .company,
+.container .main .col .content .school {
+  font-size: 16px;
+}
+.container .main .col .content .years,
+.container .main .col .content .location {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 11px;
+}
+.container .main .col .content .school,
+.container .main .col .content .company,
+.container .main .col .content .degree,
+.container .main .col .content .job-title {
+  position: relative;
+}
+.container .main .col .content .job-title,
+.container .main .col .content .degree,
+.container .main .col .content .major {
+  font-size: 14px;
+}
+.container .main .col .content .comments {
+  font-size: 13px;
+  padding: 1px 0px;
+}
+.container .main .col .content .comments:last-child {
+  padding-bottom: 0px;
+}
+footer {
+  background-color: rgba(81,81,81,0.6);
+  color: #444;
+  font-size: 12px;
+  padding: 40px 0px;
+  margin-top: 20px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+footer span {
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: none;
+}
+footer a.linkedin:hover i {
+  color: #4875b4;
+}
+footer a.facebook:hover i {
+  color: #3b5998;
+}
+footer a.github:hover i {
+  color: #79d858;
+}
+footer a.twitter:hover i {
+  color: #3cf;
+}
+footer i {
+  font-size: 20px;
+  margin-right: 8px;
+}
