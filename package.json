@@ -1,0 +1,20 @@
+{
+  "name": "jarrodperez.com",
+  "version": "1.0.0",
+  "description": "Personal site for Jarrod Perez",
+  "author": "Jarrod Perez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cytoplankton/jarrodperez.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.3",
+    "gulp-jshint": "^1.7.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-stylus": "^1.1.0",
+    "gulp-uglify": "^0.3.1"
+  }
+}

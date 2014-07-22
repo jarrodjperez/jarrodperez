@@ -7,34 +7,51 @@ myApp.config(function($routeProvider) {
 
 		// route for the home page
 		.when('/', {
-			templateUrl : 'pages/home.html',
+			templateUrl : 'views/home.html',
 			controller  : 'mainCtrl',
 			caseInsensitiveMatch: true
 		})
 
 		// route for the about page
 		.when('/about', {
-			templateUrl : 'pages/about.html',
+			templateUrl : 'views/about.html',
 			controller  : 'aboutCtrl',
 			caseInsensitiveMatch: true
 		}) 
 
 		// route for the contact page
 		.when('/contact', {
-			templateUrl : 'pages/contact.html',
+			templateUrl : 'views/contact.html',
 			controller  : 'contactCtrl',
 			caseInsensitiveMatch: true
 		})
 		
 		//route for some Lost tv show fun
 		.when('/lost', {
-		   templateUrl: 'pages/lost.html',
+		   templateUrl: 'views/lost.html',
 		   controller: 'lostCtrl',
 		   caseInsensitiveMatch: true
 		});
 });
-
-// create the controller and inject Angular's $scope
+myApp.controller('aboutCtrl', function($scope) {
+	$scope.message = 'About me!';
+});
+myApp.controller('contactCtrl', function($scope) {
+	$scope.message = 'Contact me!';
+});
+myApp.controller('lostCtrl', function($scope) {
+    var t1 = new Date(2015, 04, 08, 16, 23, 42, 0);
+    var t2 = new Date();
+    var dif = t1.getTime() - t2.getTime();
+    
+    var Seconds_from_T1_to_T2 = dif / 1000;
+    var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
+    
+    var clock = $('.clock').FlipClock(Seconds_Between_Dates, {
+        countdown: true,
+        clockFace: 'DailyCounter'
+    }); 
+});
 myApp.controller('mainCtrl', function($scope) {
     $scope.links = ["about", "contact"];
     $scope.footerLinks = [
@@ -94,26 +111,4 @@ myApp.controller('mainCtrl', function($scope) {
     $scope.linkClass = function(link) {
         return link === $scope.selected ? 'active' : undefined;
     };
-});
-
-myApp.controller('aboutCtrl', function($scope) {
-	$scope.message = 'About me!';
-});
-
-myApp.controller('contactCtrl', function($scope) {
-	$scope.message = 'Contact me!';
-});
-
-myApp.controller('lostCtrl', function($scope) {
-    var t1 = new Date(2015, 04, 08, 16, 23, 42, 0);
-    var t2 = new Date();
-    var dif = t1.getTime() - t2.getTime();
-    
-    var Seconds_from_T1_to_T2 = dif / 1000;
-    var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
-    
-    var clock = $('.clock').FlipClock(Seconds_Between_Dates, {
-        countdown: true,
-        clockFace: 'DailyCounter'
-    }); 
 });
