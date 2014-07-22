@@ -25,11 +25,4 @@ myApp.config(function($routeProvider) {
 			controller  : 'contactCtrl',
 			caseInsensitiveMatch: true
 		})
-		
-		//route for some Lost tv show fun
-		.when('/lost', {
-		   templateUrl: 'views/lost.html',
-		   controller: 'lostCtrl',
-		   caseInsensitiveMatch: true
-		});
 });
