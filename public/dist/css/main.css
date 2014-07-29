@@ -1,3 +1,4 @@
+/*reset*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
@@ -15,105 +16,19 @@ p,
 div {
   font-family: 'Source Sans Pro', sans-serif;
 }
-a:hover {
-  color: #000;
-}
+/*variables*/
+/*partials*/
 .navbar-default {
   background-color: #fff;
+}
+.navbar-default .navbar-brand:hover {
+  color: #000;
 }
 .navbar-default .navbar-nav > li > a:hover {
   color: #000;
 }
 .dropdown-menu > li> a:hover {
   background: #000;
-}
-.container .main {
-  clear: both;
-  min-height: 1000px;
-}
-.container .main .jumbotron {
-  background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 70px 15px 30px 15px;
-  border-radius: 0;
-}
-.container .main .jumbotron .clock {
-  margin: 20px 0px 0px 130px;
-}
-.container .main .col.employment .fa-angle-right,
-.container .main .col.education .fa-angle-right {
-  font-size: 10px;
-}
-.container .main .col.employment .job {
-  margin-bottom: 10px;
-}
-.container .main .col.employment .job .company {
-  color: #000;
-  position: relative;
-}
-.container .main .col.education {
-  padding-top: 15px;
-}
-.container .main .col.education .school {
-  color: #000;
-}
-.container .main .col.skills {
-  padding-bottom: 15px;
-}
-.container .main .col.skills .skill-collection {
-  margin-bottom: 10px;
-}
-.container .main .col.skills .skill-collection .type {
-  color: #000;
-  text-transform: capitalize;
-}
-.container .main .col.skills .skill-collection .skill {
-  font-size: 13px;
-}
-.container .main .col.skills .skill-collection .fa {
-  font-size: 16px;
-}
-.container .main .col.skills .skill-collection .fa-angle-right {
-  font-size: 10px;
-}
-.container .main .col .content {
-  background: #fff;
-  padding: 10px;
-}
-.container .main .col .content .title {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.container .main .col .content .type,
-.container .main .col .content .company,
-.container .main .col .content .school {
-  font-size: 16px;
-}
-.container .main .col .content .years,
-.container .main .col .content .location {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  font-size: 11px;
-}
-.container .main .col .content .school,
-.container .main .col .content .company,
-.container .main .col .content .degree,
-.container .main .col .content .job-title {
-  position: relative;
-}
-.container .main .col .content .job-title,
-.container .main .col .content .degree,
-.container .main .col .content .major {
-  font-size: 14px;
-}
-.container .main .col .content .comments {
-  font-size: 13px;
-  padding: 1px 0px;
-}
-.container .main .col .content .comments:last-child {
-  padding-bottom: 0px;
 }
 footer {
   background-color: rgba(81,81,81,0.6);
@@ -131,6 +46,7 @@ footer a {
 }
 footer a:hover {
   text-decoration: none;
+  color: #000;
 }
 footer a.linkedin:hover i {
   color: #4875b4;
@@ -147,4 +63,86 @@ footer a.twitter:hover i {
 footer i {
   font-size: 20px;
   margin-right: 8px;
+}
+/*pages*/
+.jumbotron {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 70px 15px 30px 15px;
+  border-radius: 0;
+}
+.employment .fa-angle-right,
+.education .fa-angle-right {
+  font-size: 10px;
+}
+.employment .job {
+  margin-bottom: 10px;
+}
+.employment .job .company {
+  color: #000;
+  position: relative;
+}
+.education {
+  padding-top: 15px;
+}
+.education .school {
+  color: #000;
+}
+.skills {
+  padding-bottom: 15px;
+}
+.skills .skill-collection {
+  margin-bottom: 10px;
+}
+.skills .skill-collection .type {
+  color: #000;
+  text-transform: capitalize;
+}
+.skills .skill-collection .skill {
+  font-size: 13px;
+}
+.skills .skill-collection .fa {
+  font-size: 16px;
+}
+.skills .skill-collection .fa-angle-right {
+  font-size: 10px;
+}
+.content {
+  background: #fff;
+  padding: 10px;
+}
+.content .title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.content .type,
+.content .company,
+.content .school {
+  font-size: 16px;
+}
+.content .years,
+.content .location {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 11px;
+}
+.content .school,
+.content .company,
+.content .degree,
+.content .job-title {
+  position: relative;
+}
+.content .job-title,
+.content .degree,
+.content .major {
+  font-size: 14px;
+}
+.content .comments {
+  font-size: 13px;
+  padding: 1px 0px;
+}
+.content .comments:last-child {
+  padding-bottom: 0px;
 }

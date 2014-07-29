@@ -13,7 +13,7 @@ gulp.task('scripts', function() {
 }).watch(scriptPaths, ['scripts']);
 
 gulp.task('stylus', function(){
-    gulp.src(stylePaths)
+    gulp.src('./public/assets/stylus/main.styl')
         .pipe(stylus())
         .pipe(gulp.dest(distPath + '/css'));
 }).watch(stylePaths, ['stylus']);
