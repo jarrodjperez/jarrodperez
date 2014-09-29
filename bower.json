@@ -1,0 +1,25 @@
+{
+  "name": "jarrodperez",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cytoplankton/jarrodperez",
+  "authors": [
+    "Jarrod Perez <perez.jarrod@gmail.com>"
+  ],
+  "description": "personal site",
+  "main": "public/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22"
+  }
+}

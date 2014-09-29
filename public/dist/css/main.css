@@ -1,148 +1,359 @@
 /*reset*/
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  background: url("../../assets/images/grid_noise.png");
-}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+h6,
 p,
-div {
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  height: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  height: 100%;
+}
+body .wrapper {
+  height: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*variables*/
 /*partials*/
-.navbar-default {
-  background-color: #fff;
+.pie {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
 }
-.navbar-default .navbar-brand:hover {
-  color: #000;
+.pie .master,
+.pie .slice,
+.pie .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
 }
-.navbar-default .navbar-nav > li > a:hover {
-  color: #000;
+.pie .cover {
+  background: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 100%;
 }
-.dropdown-menu > li> a:hover {
-  background: #000;
-}
-footer {
-  background-color: rgba(81,81,81,0.6);
-  color: #444;
-  font-size: 12px;
-  padding: 40px 0px;
-  margin-top: 20px;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
-}
-footer span {
-  color: #fff;
-}
-footer a {
-  color: #fff;
-}
-footer a:hover {
-  text-decoration: none;
-  color: #000;
-}
-footer a.linkedin:hover i {
-  color: #4875b4;
-}
-footer a.facebook:hover i {
-  color: #3b5998;
-}
-footer a.github:hover i {
-  color: #79d858;
-}
-footer a.twitter:hover i {
-  color: #3cf;
-}
-footer i {
-  font-size: 20px;
-  margin-right: 8px;
+.pie .cover .content {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -10px;
 }
 /*pages*/
-.jumbotron {
-  background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 70px 15px 30px 15px;
-  border-radius: 0;
-}
-.employment .fa-angle-right,
-.education .fa-angle-right {
-  font-size: 10px;
-}
-.employment .job {
-  margin-bottom: 10px;
-}
-.employment .job .company {
-  color: #000;
+#home {
+  width: 100%;
+  height: 100%;
   position: relative;
+  background: url("../../assets/images/newportbg.png") repeat center center fixed;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
 }
-.education {
-  padding-top: 15px;
-}
-.education .school {
-  color: #000;
-}
-.skills {
-  padding-bottom: 15px;
-}
-.skills .skill-collection {
-  margin-bottom: 10px;
-}
-.skills .skill-collection .type {
-  color: #000;
-  text-transform: capitalize;
-}
-.skills .skill-collection .skill {
-  font-size: 13px;
-}
-.skills .skill-collection .fa {
-  font-size: 16px;
-}
-.skills .skill-collection .fa-angle-right {
-  font-size: 10px;
-}
-.content {
-  background: #fff;
-  padding: 10px;
-}
-.content .title {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.content .type,
-.content .company,
-.content .school {
-  font-size: 16px;
-}
-.content .years,
-.content .location {
+#home .brand {
+  text-align: center;
   position: absolute;
-  top: 3px;
-  right: 10px;
-  font-size: 11px;
+  height: 110px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  text-transform: uppercase;
 }
-.content .school,
-.content .company,
-.content .degree,
-.content .job-title {
-  position: relative;
+#home .brand h1 {
+  letter-spacing: 0.3em;
+  font-size: 2.1em;
+  text-shadow: 1px 1px 10px #3b3b3b;
+  font-weight: 300;
+  background: rgba(1,1,1,0.1);
+  padding: 0.3em;
+  color: #fff;
+  padding-left: 1em;
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  -o-animation-delay: 0.7s;
+  ms-animation-delay: 0.7s;
 }
-.content .job-title,
-.content .degree,
-.content .major {
-  font-size: 14px;
+#home .brand h2 {
+  opacity: 0.7;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  ms-animation-delay: 1s;
+  color: #ccc;
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+  margin-top: 1.2em;
+  padding-left: 1em;
 }
-.content .comments {
-  font-size: 13px;
-  padding: 1px 0px;
+#home .scrollDown {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  ms-animation-delay: 2s;
+  text-align: center;
+  color: #d3d3d3;
 }
-.content .comments:last-child {
-  padding-bottom: 0px;
+#home .scrollDown div {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+#home .scrollDown .fa-chevron-down {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  color: #a8a8a8;
+  font-size: 3em;
+}
+#home .scrollDown .fa-chevron-down:hover {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+#about {
+  background: #f5f5f5;
+  padding: 100px 140px;
+}
+#about .container {
+  text-align: center;
+}
+#about .container img {
+  vertical-align: middle;
+  height: 300px;
+  margin-bottom: 45px;
+  border-radius: 150px;
+}
+#about .container h1 {
+  font-size: 1.8em;
+  margin-bottom: 45px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#about .container p {
+  color: #666;
+  margin: 0 auto;
+  font-size: 1.4em;
+  letter-spacing: 0.04em;
+  line-height: 1.7em;
+  font-weight: 300;
+}
+#skills {
+  padding: 100px 140px;
+}
+#skills .container {
+  text-align: center;
+}
+#skills .container h1 {
+  font-size: 1.8em;
+  margin-bottom: 45px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#skills .container .skill-section {
+  float: left;
+  width: 33%;
+}
+#skills .container .skill-section .pie .master {
+  background: #60f2ff;
+}
+#skills .container .skill-section .pie .inner {
+  background: #f5f5f5;
+}
+#skills .container .skill-section .main .master {
+  background: #60ffac;
+}
+#skills .container .skill-section .main .content {
+  font-size: 20px;
+}
+#contact {
+  background: #363636;
+  color: #9c9c9c;
+  padding: 100px 140px;
+}
+#contact .container {
+  text-align: center;
+}
+#contact .container h1 {
+  font-size: 1.8em;
+  margin-bottom: 45px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#contact .container .icons {
+  font-size: 2em;
+}
+#contact .container .icons ul {
+  list-style: none;
+}
+#contact .container .icons ul li {
+  margin: 0px 40px;
+  display: inline;
+}
+#contact .container .icons ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+#contact .container .icons ul li:hover a.github {
+  color: #000;
+}
+#contact .container .icons ul li:hover a.linkedin {
+  color: #4183c4;
+}
+#contact .container .icons ul li:hover a.twitter {
+  color: #32ccfe;
+}
+#contact .container .icons ul li:hover a.facebook {
+  color: #3b5998;
+}
+#contact .container .copyright {
+  font-size: 0.8em;
+  margin-top: 45px;
 }
