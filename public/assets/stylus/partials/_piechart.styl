@@ -3,18 +3,25 @@
     display: inline-block;
     margin: 5px;
 
-    .master,
-    .slice,
-    .inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        border-radius: 100%;
+    .master, .inner {
+      border: 5px solid whitesmoke;
     }
+
+    .inner {
+      border-color: rgb(255, 0, 235);
+    }
+
+    .master, .slice, .inner {
+      border-radius: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
     .cover {
-        background: #fff;
         position: absolute;
         top: 5px;
         left: 5px;
@@ -30,6 +37,11 @@
             width: 100%;
             top: 50%;
             margin-top: -10px;
+
+            .fa {
+              font-size: 50px;
+              margin-top: -13px;
+            }
         }
     }
 }

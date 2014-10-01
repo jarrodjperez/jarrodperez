@@ -9,3 +9,99 @@
 
 /*pages*/
 @import 'pages/pages';
+
+body {
+	header {
+		position: fixed;
+		z-index: 2;
+		left: 20px;
+		top: 20px;
+
+		div {
+			animation-delay: 2s;
+			-webkit-animation-delay: 2s;
+			
+			.pie {
+				transition-duration: 0.3s;
+				-webkit-transition-duration: 0.3s;
+
+				.master {
+					border-color: transparent;
+				}
+
+				.cover {
+					.content {
+						color: #fff;
+
+						.fa {
+							text-shadow: 1px 1px 1px #3b3b3b;
+						}
+					}
+				}
+			}
+
+			.menu {
+				animation-delay: 0s;
+				-webkit-animation-delay: 0s;
+				
+				display: none;
+				color: #fff;
+				position: absolute;
+				top: 7px;
+				right: 0px;
+			}
+		}
+
+		div:hover { 
+			.pie {
+				transform: translateX(75px);
+				-webkit-transform: translateX(75px);
+			}
+
+			.menu {
+				display: block;
+				width: 100%;
+				height: 95px;
+
+				.leftSide, .rightSide {
+					animation-delay: 0s;
+					-webkit-animation-delay: 0s;
+
+					height: 100%;
+					position: absolute;
+					width: 50%;
+
+					span {
+						cursor: default;
+						text-shadow: 1px 1px 1px #3b3b3b;
+					}
+
+					span:hover {
+						color: rgb(255, 0, 235);
+					}
+				}
+
+				.leftSide {
+					left: 30px;
+					text-align: right;
+
+					.skills {
+						position: absolute;
+						bottom: 0px;
+						right: 0px;
+					}
+				}
+
+				.rightSide {
+					right: -121px;
+
+					.about {
+						position: absolute;
+						bottom: 0px;
+						left: 0px;
+					}
+				}
+			}
+		}
+	}
+}

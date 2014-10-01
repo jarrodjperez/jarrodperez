@@ -143,17 +143,24 @@ a {
   margin: 5px;
 }
 .pie .master,
+.pie .inner {
+  border: 5px solid #f5f5f5;
+}
+.pie .inner {
+  border-color: #ff00eb;
+}
+.pie .master,
 .pie .slice,
 .pie .inner {
+  border-radius: 100%;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  border-radius: 100%;
+  bottom: 0;
 }
 .pie .cover {
-  background: #fff;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -169,6 +176,10 @@ a {
   width: 100%;
   top: 50%;
   margin-top: -10px;
+}
+.pie .cover .content .fa {
+  font-size: 50px;
+  margin-top: -13px;
 }
 /*pages*/
 #home {
@@ -267,9 +278,10 @@ a {
 }
 #about .container img {
   vertical-align: middle;
-  height: 300px;
+  height: 200px;
   margin-bottom: 45px;
   border-radius: 150px;
+  border: 4px solid #3a3a3a;
 }
 #about .container h1 {
   font-size: 1.8em;
@@ -286,7 +298,7 @@ a {
   font-weight: 300;
 }
 #skills {
-  padding: 100px 140px;
+  padding: 100px 140px 190px 140px;
 }
 #skills .container {
   text-align: center;
@@ -299,19 +311,36 @@ a {
 }
 #skills .container .skill-section {
   float: left;
-  width: 33%;
-}
-#skills .container .skill-section .pie .master {
-  background: #60f2ff;
+  width: 50%;
 }
 #skills .container .skill-section .pie .inner {
-  background: #f5f5f5;
+  border-color: #60f2ff;
 }
-#skills .container .skill-section .main .master {
-  background: #60ffac;
+#skills .container .skill-section .main .inner {
+  border-color: #60ffac;
 }
 #skills .container .skill-section .main .content {
   font-size: 20px;
+}
+#skills .container .skill-section .skill {
+  display: inline-block;
+  position: relative;
+}
+#skills .container .skill-section .skill .subskills {
+  position: absolute;
+  display: none;
+  width: 500px;
+  left: -185px;
+  top: 135px;
+}
+#skills .container .skill-section .skill .subskills .subskill {
+  display: inline-block;
+}
+#skills .container .skill-section .skill .subskills .subskill .inner {
+  border-color: #ff00eb;
+}
+#skills .container .skill-section .skill:hover .subskills {
+  display: inline-block;
 }
 #contact {
   background: #363636;
@@ -345,15 +374,90 @@ a {
   color: #000;
 }
 #contact .container .icons ul li:hover a.linkedin {
-  color: #4183c4;
+  color: #60ffac;
 }
-#contact .container .icons ul li:hover a.twitter {
-  color: #32ccfe;
+#contact .container .icons ul li:hover a.email {
+  color: #ff00eb;
 }
 #contact .container .icons ul li:hover a.facebook {
-  color: #3b5998;
+  color: #32ccfe;
 }
 #contact .container .copyright {
   font-size: 0.8em;
   margin-top: 45px;
+}
+body header {
+  position: fixed;
+  z-index: 2;
+  left: 20px;
+  top: 20px;
+}
+body header div {
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+body header div .pie {
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+body header div .pie .master {
+  border-color: transparent;
+}
+body header div .pie .cover .content {
+  color: #fff;
+}
+body header div .pie .cover .content .fa {
+  text-shadow: 1px 1px 1px #3b3b3b;
+}
+body header div .menu {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  display: none;
+  color: #fff;
+  position: absolute;
+  top: 7px;
+  right: 0px;
+}
+body header div:hover .pie {
+  transform: translateX(75px);
+  -webkit-transform: translateX(75px);
+}
+body header div:hover .menu {
+  display: block;
+  width: 100%;
+  height: 95px;
+}
+body header div:hover .menu .leftSide,
+body header div:hover .menu .rightSide {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  height: 100%;
+  position: absolute;
+  width: 50%;
+}
+body header div:hover .menu .leftSide span,
+body header div:hover .menu .rightSide span {
+  cursor: default;
+  text-shadow: 1px 1px 1px #3b3b3b;
+}
+body header div:hover .menu .leftSide span:hover,
+body header div:hover .menu .rightSide span:hover {
+  color: #ff00eb;
+}
+body header div:hover .menu .leftSide {
+  left: 30px;
+  text-align: right;
+}
+body header div:hover .menu .leftSide .skills {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+body header div:hover .menu .rightSide {
+  right: -121px;
+}
+body header div:hover .menu .rightSide .about {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }

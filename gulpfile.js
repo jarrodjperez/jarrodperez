@@ -3,7 +3,7 @@ var stylus = require('gulp-stylus');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
 
-var scriptPaths = ['./public/app.js', './public/controllers/*.js', './public/directives/*.js', './public/services/*.js'];
+var scriptPaths = ['./public/app.js', './public/controllers/*.js', './public/directives/**/*.js', './public/services/*.js'];
 var stylePaths = ['./public/assets/stylus/**/*.styl'];
 var distPath = ['./public/dist'];
 

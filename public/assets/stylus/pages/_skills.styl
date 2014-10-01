@@ -1,5 +1,5 @@
 #skills {
-	padding: 100px 140px;
+	padding: 100px 140px 190px 140px;
 
 	.container {
 		text-align: center;
@@ -13,24 +13,48 @@
 
 		.skill-section {
 			float: left;
-			width: 33%;
+			width: 50%;
 
 			.pie {
-				.master {
-					background: #60F2FF;
-				}
 				.inner {
-					background: whitesmoke;
+					border-color: #60F2FF;
 				}
 			}
 
 			.main {
-				.master {
-					background: #60FFAC;
+				.inner {
+					border-color: #60FFAC;
 				}
 
 				.content {
 					font-size: 20px;
+				}
+			}
+
+			.skill {
+				display: inline-block;
+				position: relative;
+
+				.subskills {
+					position: absolute;
+					display: none;
+					width: 500px;
+					left: -185px;
+					top: 135px;
+
+					.subskill {
+						display: inline-block;
+
+						.inner {
+							border-color: rgb(255, 0, 235);
+						}
+					}
+				}
+			}
+
+			.skill:hover {
+				.subskills {
+					display: inline-block;
 				}
 			}
 		}
