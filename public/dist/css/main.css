@@ -271,7 +271,7 @@ a {
 }
 #about {
   background: #f5f5f5;
-  padding: 100px 140px;
+  padding: 100px 0px;
 }
 #about .container {
   text-align: center;
@@ -298,7 +298,7 @@ a {
   font-weight: 300;
 }
 #skills {
-  padding: 100px 140px 190px 140px;
+  padding: 100px 0px 190px 0px;
 }
 #skills .container {
   text-align: center;
@@ -345,7 +345,7 @@ a {
 #contact {
   background: #363636;
   color: #9c9c9c;
-  padding: 100px 140px;
+  padding: 100px 0px;
 }
 #contact .container {
   text-align: center;
