@@ -26,29 +26,56 @@ body {
 				-webkit-transition-duration: 0.3s;
 
 				.master {
-					border-color: transparent;
+					border-color: rgba(1,1,1,0.1);
 				}
 
 				.cover {
 					.content {
 						color: #fff;
-
-						.fa {
-							text-shadow: 1px 1px 1px #3b3b3b;
-						}
+						text-shadow: 1px 1px 1px #3b3b3b;
 					}
 				}
 			}
 
-			.menu {
-				animation-delay: 0s;
-				-webkit-animation-delay: 0s;
-				
+			.menu {				
 				display: none;
 				color: #fff;
 				position: absolute;
 				top: 7px;
 				right: 0px;
+
+				div {
+					animation-delay: 0s;
+					-webkit-animation-delay: 0s;
+					margin-bottom: 10px;
+				}
+
+				div:hover {
+					a{
+						color: #60F2FF;
+						cursor: default;
+						text-decoration: none;
+					}
+				}
+
+				div.link {
+					text-shadow: 1px 1px 1px #3b3b3b;
+
+					&.about {
+						animation-delay: .10s;
+						-webkit-animation-delay: .10s;
+					}
+
+					&.skills {
+						animation-delay: .20s;
+						-webkit-animation-delay: .20s;
+					}
+
+					&.contact {
+						animation-delay: .30s;
+						-webkit-animation-delay: .30s;
+					}
+				}
 			}
 		}
 
@@ -62,45 +89,6 @@ body {
 				display: block;
 				width: 100%;
 				height: 95px;
-
-				.leftSide, .rightSide {
-					animation-delay: 0s;
-					-webkit-animation-delay: 0s;
-
-					height: 100%;
-					position: absolute;
-					width: 50%;
-
-					span {
-						cursor: default;
-						text-shadow: 1px 1px 1px #3b3b3b;
-					}
-
-					span:hover {
-						color: rgb(255, 0, 235);
-					}
-				}
-
-				.leftSide {
-					left: 30px;
-					text-align: right;
-
-					.skills {
-						position: absolute;
-						bottom: 0px;
-						right: 0px;
-					}
-				}
-
-				.rightSide {
-					right: -121px;
-
-					.about {
-						position: absolute;
-						bottom: 0px;
-						left: 0px;
-					}
-				}
 			}
 		}
 	}

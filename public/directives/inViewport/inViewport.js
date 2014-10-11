@@ -17,11 +17,8 @@ myApp.directive('inViewport', function() {
                     elemVisible = topOnScreen; //|| bottomOnScreen;
                 
                     if(elemVisible) {
-                		element.addClass('animated ' + animation);	
-                	} 
-                	//else {
-                	// 	element.removeClass('animated ' + animation);
-                	// }
+                		element.addClass('animated ' + animation);
+                	}
 	        };
 
 	        viewport.scroll(setVisible);

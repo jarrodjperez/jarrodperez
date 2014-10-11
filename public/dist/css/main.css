@@ -134,6 +134,8 @@ table {
 a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: inherit;
 }
 /*variables*/
 /*partials*/
@@ -147,7 +149,7 @@ a {
   border: 5px solid #f5f5f5;
 }
 .pie .inner {
-  border-color: #ff00eb;
+  border-color: #60f2ff;
 }
 .pie .master,
 .pie .slice,
@@ -176,10 +178,6 @@ a {
   width: 100%;
   top: 50%;
   margin-top: -10px;
-}
-.pie .cover .content .fa {
-  font-size: 50px;
-  margin-top: -13px;
 }
 /*pages*/
 #home {
@@ -314,10 +312,10 @@ a {
   width: 50%;
 }
 #skills .container .skill-section .pie .inner {
-  border-color: #60f2ff;
+  border-color: #60ffac;
 }
 #skills .container .skill-section .main .inner {
-  border-color: #60ffac;
+  border-color: #60f2ff;
 }
 #skills .container .skill-section .main .content {
   font-size: 20px;
@@ -401,22 +399,43 @@ body header div .pie {
   -webkit-transition-duration: 0.3s;
 }
 body header div .pie .master {
-  border-color: transparent;
+  border-color: rgba(1,1,1,0.1);
 }
 body header div .pie .cover .content {
   color: #fff;
-}
-body header div .pie .cover .content .fa {
   text-shadow: 1px 1px 1px #3b3b3b;
 }
 body header div .menu {
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
   display: none;
   color: #fff;
   position: absolute;
   top: 7px;
   right: 0px;
+}
+body header div .menu div {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  margin-bottom: 10px;
+}
+body header div .menu div:hover a {
+  color: #60f2ff;
+  cursor: default;
+  text-decoration: none;
+}
+body header div .menu div.link {
+  text-shadow: 1px 1px 1px #3b3b3b;
+}
+body header div .menu div.link.about {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+body header div .menu div.link.skills {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+body header div .menu div.link.contact {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
 }
 body header div:hover .pie {
   transform: translateX(75px);
@@ -426,38 +445,4 @@ body header div:hover .menu {
   display: block;
   width: 100%;
   height: 95px;
-}
-body header div:hover .menu .leftSide,
-body header div:hover .menu .rightSide {
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  height: 100%;
-  position: absolute;
-  width: 50%;
-}
-body header div:hover .menu .leftSide span,
-body header div:hover .menu .rightSide span {
-  cursor: default;
-  text-shadow: 1px 1px 1px #3b3b3b;
-}
-body header div:hover .menu .leftSide span:hover,
-body header div:hover .menu .rightSide span:hover {
-  color: #ff00eb;
-}
-body header div:hover .menu .leftSide {
-  left: 30px;
-  text-align: right;
-}
-body header div:hover .menu .leftSide .skills {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-body header div:hover .menu .rightSide {
-  right: -121px;
-}
-body header div:hover .menu .rightSide .about {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
 }

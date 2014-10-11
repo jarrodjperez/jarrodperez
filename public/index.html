@@ -26,15 +26,19 @@
         <div class="wrapper">
             <header>
                 <div class="animated fadeInLeft">
-                    <piechart size="100" value="getValue()" icon="fa fa-compass"></piechart>
+                    <piechart size="100" value="getValue()" label="navigate"></piechart>
                     <div class="menu">
-                        <div class="leftSide animated fadeInRight">
-                            <span class="contact" ng-click="goTo('contact')">Contact</span>
-                            <span class="skills" ng-click="goTo('skills')">Skills</span>
+                        <div class="link home animated fadeInLeft" ng-click="goTo('home')">
+                            <a>Home</a>
                         </div>
-                        <div class="rightSide animated fadeInLeft">
-                            <span class="home" ng-click="goTo('home')">Home</span>
-                            <span class="about" ng-click="goTo('about')">About</span>
+                        <div class="link about animated fadeInLeft" ng-click="goTo('about')">
+                            <a>About</a>
+                        </div>
+                        <div class="link skills animated fadeInLeft" ng-click="goTo('skills')">
+                            <a>Skills</a>
+                        </div>
+                        <div class="link contact animated fadeInLeft" ng-click="goTo('contact')">
+                            <a>Contact</a>
                         </div>
                     </div>
                 </div>
