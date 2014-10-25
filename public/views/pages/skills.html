@@ -4,13 +4,13 @@
 
 		<div class="skill-tree">
 			<div class="skill-section" ng-repeat="tier1 in skillTree" in-viewport animation="{{$index == 1 ? 'fadeInRight' : 'fadeInLeft'}}">
-				<piechart class="main" size="150", value="tier1.value" label="{{tier1.name}}"></piechart>
+				<piechart class="main" size="getCirleWidth(6, 150)", value="tier1.value" label="{{tier1.name}}"></piechart>
 				<br />
 				<div class="skill" ng-repeat="tier2 in tier1.skills">
-					<piechart size="120" value="tier2.value" label="{{tier2.skill}}"></piechart>
+					<piechart size="getCirleWidth(10, 50)" value="tier2.value" label="{{tier2.skill}}"></piechart>
 					<div class="subskills animated fadeInDown">
 						<div class="subskill" ng-repeat="tier3 in tier2.subSkills">
-							<piechart size="100" value="tier3.value" label="{{tier3.subSkill}}"></piechart>
+							<piechart size="getCirleWidth(12, 100)" value="tier3.value" label="{{tier3.subSkill}}"></piechart>
 						</div>
 					</div>
 				</div>

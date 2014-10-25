@@ -168,6 +168,7 @@ a {
   left: 5px;
   bottom: 5px;
   right: 5px;
+  overflow: hidden;
   border-radius: 100%;
 }
 .pie .cover .content {
@@ -361,7 +362,7 @@ a {
   list-style: none;
 }
 #contact .container .icons ul li {
-  margin: 0px 40px;
+  padding: 0px 30px;
   display: inline;
 }
 #contact .container .icons ul li a {
@@ -386,63 +387,78 @@ a {
 }
 body header {
   position: fixed;
-  z-index: 2;
-  left: 20px;
-  top: 20px;
+  z-index: 9999;
+  width: 100%;
 }
-body header div {
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+body header .nav-container {
+  padding: 10px;
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
 }
-body header div .pie {
+body header .nav-container .pie {
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
 }
-body header div .pie .master {
+body header .nav-container .pie .master {
   border-color: rgba(1,1,1,0.1);
 }
-body header div .pie .cover .content {
+body header .nav-container .pie .cover .content {
   color: #fff;
   text-shadow: 1px 1px 1px #3b3b3b;
 }
-body header div .menu {
+body header .nav-container .pie .cover:hover .content {
+  color: #32ccfe;
+  cursor: default;
+}
+body header .menu {
   display: none;
   color: #fff;
   position: absolute;
-  top: 7px;
-  right: 0px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.5em;
+  background: rgba(1,1,1,0.5);
 }
-body header div .menu div {
+body header .menu div {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   margin-bottom: 10px;
 }
-body header div .menu div:hover a {
+body header .menu div:last-child {
+  margin-bottom: 0;
+}
+body header .menu div:hover a {
   color: #60f2ff;
   cursor: default;
   text-decoration: none;
 }
-body header div .menu div.link {
+body header .menu div.link {
   text-shadow: 1px 1px 1px #3b3b3b;
 }
-body header div .menu div.link.about {
+body header .menu div.link.about {
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
-body header div .menu div.link.skills {
+body header .menu div.link.skills {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
-body header div .menu div.link.contact {
+body header .menu div.link.contact {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-body header div:hover .pie {
-  transform: translateX(75px);
-  -webkit-transform: translateX(75px);
-}
-body header div:hover .menu {
-  display: block;
-  width: 100%;
-  height: 95px;
+body div.shade {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-animation: fade 500ms;
+  -moz-animation: fade 500ms;
+  -ms-animation: fade 500ms;
+  -o-animation: fade 500ms;
+  animation: fade 500ms;
 }

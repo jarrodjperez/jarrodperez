@@ -17,6 +17,7 @@
         <script src="dist/angular/angular.min.js"></script>
         <script src="dist/angular-route/angular-route.min.js"></script>
         <script src="dist/angular-animate/angular-animate.js"></script>
+        <script src="dist/angular-touch/angular-touch.min.js"></script>
         <script src="dist/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="dist/scripts/app.js"></script> 
     </head>
@@ -25,24 +26,26 @@
     <body ng-controller="mainCtrl">
         <div class="wrapper">
             <header>
-                <div class="animated fadeInLeft">
-                    <piechart size="100" value="getValue()" label="navigate"></piechart>
-                    <div class="menu">
-                        <div class="link home animated fadeInLeft" ng-click="goTo('home')">
-                            <a>Home</a>
-                        </div>
-                        <div class="link about animated fadeInLeft" ng-click="goTo('about')">
-                            <a>About</a>
-                        </div>
-                        <div class="link skills animated fadeInLeft" ng-click="goTo('skills')">
-                            <a>Skills</a>
-                        </div>
-                        <div class="link contact animated fadeInLeft" ng-click="goTo('contact')">
-                            <a>Contact</a>
-                        </div>
+                <div class="nav-container animated fadeInLeft">
+                    <piechart ng-click="showMenu()" size="getCirleWidth(15, 100)" value="getValue()" label="menu"></piechart>
+                </div>
+
+                <div class="menu">
+                    <div class="link home animated flipInX" ng-click="goTo('home'); hideMenu();">
+                        <a>Home</a>
+                    </div>
+                    <div class="link about animated flipInX" ng-click="goTo('about'); hideMenu();">
+                        <a>About</a>
+                    </div>
+                    <div class="link skills animated flipInX" ng-click="goTo('skills'); hideMenu();">
+                        <a>Skills</a>
+                    </div>
+                    <div class="link contact animated flipInX" ng-click="goTo('contact'); hideMenu();">
+                        <a>Contact</a>
                     </div>
                 </div>
             </header>
+            <div class="shade" ng-click="hideMenu()"></div>
             <ng-include src="'/views/pages/home.html'"></ng-include>
             <ng-include src="'/views/pages/about.html'"></ng-include>
             <ng-include src="'/views/pages/skills.html'"></ng-include>

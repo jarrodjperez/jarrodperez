@@ -1,5 +1,5 @@
 // create the module and name it
-var myApp = angular.module('myApp', ['ngAnimate']);
+var myApp = angular.module('myApp', ['ngAnimate', 'ngTouch']);
 
 myApp.config(function($locationProvider) {
 	$locationProvider.html5Mode(true);

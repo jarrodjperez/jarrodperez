@@ -13,13 +13,13 @@
 body {
 	header {
 		position: fixed;
-		z-index: 2;
-		left: 20px;
-		top: 20px;
+		z-index: 9999;
+		width: 100%;
 
-		div {
-			animation-delay: 2s;
-			-webkit-animation-delay: 2s;
+		.nav-container {
+			padding: 10px;
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s;
 			
 			.pie {
 				transition-duration: 0.3s;
@@ -34,62 +34,78 @@ body {
 						color: #fff;
 						text-shadow: 1px 1px 1px #3b3b3b;
 					}
-				}
-			}
 
-			.menu {				
-				display: none;
-				color: #fff;
-				position: absolute;
-				top: 7px;
-				right: 0px;
-
-				div {
-					animation-delay: 0s;
-					-webkit-animation-delay: 0s;
-					margin-bottom: 10px;
-				}
-
-				div:hover {
-					a{
-						color: #60F2FF;
-						cursor: default;
-						text-decoration: none;
-					}
-				}
-
-				div.link {
-					text-shadow: 1px 1px 1px #3b3b3b;
-
-					&.about {
-						animation-delay: .10s;
-						-webkit-animation-delay: .10s;
-					}
-
-					&.skills {
-						animation-delay: .20s;
-						-webkit-animation-delay: .20s;
-					}
-
-					&.contact {
-						animation-delay: .30s;
-						-webkit-animation-delay: .30s;
+					&:hover {
+						.content {
+							color: #32ccfe;
+							cursor: default;
+						}
 					}
 				}
 			}
 		}
 
-		div:hover { 
-			.pie {
-				transform: translateX(75px);
-				-webkit-transform: translateX(75px);
+		.menu {				
+			display: none;
+			color: #fff;
+			position: absolute;
+			padding: 10px;
+			width: 100%;
+			font-size: 1.5em;
+			background: rgba(1,1,1,0.5);
+
+			div {
+				animation-delay: 0s;
+				-webkit-animation-delay: 0s;
+				margin-bottom: 10px;
 			}
 
-			.menu {
-				display: block;
-				width: 100%;
-				height: 95px;
+			div:last-child {
+				margin-bottom: 0;
+			}
+
+			div:hover {
+				a{
+					color: #60F2FF;
+					cursor: default;
+					text-decoration: none;
+				}
+			}
+
+			div.link {
+				text-shadow: 1px 1px 1px #3b3b3b;
+
+				&.about {
+					animation-delay: .10s;
+					-webkit-animation-delay: .10s;
+				}
+
+				&.skills {
+					animation-delay: .20s;
+					-webkit-animation-delay: .20s;
+				}
+
+				&.contact {
+					animation-delay: .30s;
+					-webkit-animation-delay: .30s;
+				}
 			}
 		}
+	}
+
+	div.shade {
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 9998;
+		background-color: rgba(0, 0, 0, 0.5);
+		-webkit-animation: fade 500ms;
+		-moz-animation: fade 500ms;
+		-ms-animation: fade 500ms;
+		-o-animation: fade 500ms;
+		animation: fade 500ms;
 	}
 }

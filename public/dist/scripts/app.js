@@ -1,5 +1,5 @@
 // create the module and name it
-var myApp = angular.module('myApp', ['ngAnimate']);
+var myApp = angular.module('myApp', ['ngAnimate', 'ngTouch']);
 
 myApp.config(function($locationProvider) {
 	$locationProvider.html5Mode(true);
@@ -55,7 +55,7 @@ myApp.service('anchorSmoothScroll', function(){
     };
 });
 
-myApp.controller('mainCtrl', function($scope, $location, anchorSmoothScroll) {
+myApp.controller('mainCtrl', function($scope, $location, anchorSmoothScroll, $window) {
 
 	$scope.skillTree = [
 		{'name': 'frontend', 'value': 85, 'skills': [
@@ -96,17 +96,38 @@ myApp.controller('mainCtrl', function($scope, $location, anchorSmoothScroll) {
 	];
 
 	$scope.goTo = function(section) {
-        // $location.hash(section);
         anchorSmoothScroll.scrollTo(section);
+    };
+
+    $scope.showMenu = function () {
+        $(document.body).find('.nav-container').hide();
+        $(document.body).find('header .menu').show();
+        $(document.body).find('.shade').show();
+    };
+
+    $scope.hideMenu = function () {
+        $(document.body).find('.nav-container').show();
+        $(document.body).find('header .menu').hide();
+        $(document.body).find('.shade').hide();
     };
 
 	$scope.getValue = function () {
 		return document.body.scrollTop / (document.body.scrollHeight - document.body.clientHeight) *100;
 	};
 
+    $scope.getCirleWidth = function (divisor, min) {
+        var size = $window.innerWidth / divisor;
+
+        return Math.max(size, min);
+    };
+
 	$(document).on('scroll', function () {
 		$scope.$digest();
 	});
+
+    $($window).on('resize', function () {
+        $scope.$digest();
+    });
 });
 myApp.directive('inViewport', function() {
 	return {
@@ -140,11 +161,11 @@ myApp.directive('piechart', function($interval) {
 	return {
 		restrict: 'E',
 		scope: {
-			value: '='
+			value: '=',
+			size: '='
 		},
 		templateUrl: '/directives/piechart/piechart.html',
 		link: function(scope, elem, attrs) {
-			scope.size = Number(attrs.size);
 			scope.label = attrs.label;
 			scope.icon = attrs.icon;
 			scope.animate = attrs.animate != undefined ? true : false;
