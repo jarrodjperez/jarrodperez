@@ -57,6 +57,14 @@ myApp.service('anchorSmoothScroll', function(){
 
 myApp.controller('mainCtrl', function($scope, $location, anchorSmoothScroll, $window) {
 
+    var randomColorTheme = function () {
+        var colors = ["red", "green", "blue", "pink"];
+
+        return colors[Math.floor(Math.random()*colors.length)];
+    };
+
+    $scope.colorTheme = randomColorTheme();
+
 	$scope.skillTree = [
 		{'name': 'frontend', 'value': 85, 'skills': [
 			{'skill': 'markup', 'value': 85, 'subSkills' : [

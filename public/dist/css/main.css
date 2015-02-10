@@ -139,21 +139,21 @@ a {
 }
 /*variables*/
 /*partials*/
-.pie {
+piechart .pie {
   position: relative;
   display: inline-block;
   margin: 5px;
 }
-.pie .master,
-.pie .inner {
+piechart .pie .master,
+piechart .pie .inner {
   border: 5px solid #f5f5f5;
 }
-.pie .inner {
+piechart .pie .inner {
   border-color: #60f2ff;
 }
-.pie .master,
-.pie .slice,
-.pie .inner {
+piechart .pie .master,
+piechart .pie .slice,
+piechart .pie .inner {
   border-radius: 100%;
   box-sizing: border-box;
   position: absolute;
@@ -162,7 +162,7 @@ a {
   right: 0;
   bottom: 0;
 }
-.pie .cover {
+piechart .pie .cover {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -171,7 +171,7 @@ a {
   overflow: hidden;
   border-radius: 100%;
 }
-.pie .cover .content {
+piechart .pie .cover .content {
   text-transform: uppercase;
   text-align: center;
   font-size: 16px;
@@ -179,6 +179,42 @@ a {
   width: 100%;
   top: 50%;
   margin-top: -10px;
+}
+body.green .pie .master {
+  border-color: #0b6f0b;
+}
+body.green .pie .inner {
+  border-color: #43ed43;
+}
+body.green .pie .cover:hover .content {
+  color: #43ed43;
+}
+body.red .pie .master {
+  border-color: #760e00;
+}
+body.red .pie .inner {
+  border-color: #ff4229;
+}
+body.red .pie .cover:hover .content {
+  color: #ff4229;
+}
+body.blue .pie .master {
+  border-color: #003e6b;
+}
+body.blue .pie .inner {
+  border-color: #0c9aff;
+}
+body.blue .pie .cover:hover .content {
+  color: #0c9aff;
+}
+body.pink .pie .master {
+  border-color: #70006a;
+}
+body.pink .pie .inner {
+  border-color: #ff19f3;
+}
+body.pink .pie .cover:hover .content {
+  color: #ff19f3;
 }
 /*pages*/
 #home {
@@ -312,12 +348,6 @@ a {
   float: left;
   width: 50%;
 }
-#skills .container .skill-section .pie .inner {
-  border-color: #60ffac;
-}
-#skills .container .skill-section .main .inner {
-  border-color: #60f2ff;
-}
 #skills .container .skill-section .main .content {
   font-size: 20px;
 }
@@ -369,21 +399,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
-#contact .container .icons ul li:hover a.github {
-  color: #000;
-}
-#contact .container .icons ul li:hover a.linkedin {
-  color: #60ffac;
-}
-#contact .container .icons ul li:hover a.email {
-  color: #ff00eb;
-}
-#contact .container .icons ul li:hover a.facebook {
-  color: #32ccfe;
-}
 #contact .container .copyright {
   font-size: 0.8em;
   margin-top: 45px;
+}
+body.green #contact .icons li:hover a {
+  color: #43ed43;
+}
+body.blue #contact .icons li:hover a {
+  color: #0c9aff;
+}
+body.red #contact .icons li:hover a {
+  color: #ff4229;
+}
+body.pink #contact .icons li:hover a {
+  color: #ff19f3;
 }
 body header {
   position: fixed;
@@ -399,38 +429,28 @@ body header .nav-container .pie {
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
 }
-body header .nav-container .pie .master {
-  border-color: rgba(1,1,1,0.1);
-}
 body header .nav-container .pie .cover .content {
   color: #fff;
   text-shadow: 1px 1px 1px #3b3b3b;
 }
-body header .nav-container .pie .cover:hover .content {
-  color: #32ccfe;
-  cursor: default;
-}
 body header .menu {
   display: none;
   color: #fff;
-  position: absolute;
-  padding: 10px;
+  position: fixed;
+  padding: 20px;
   width: 100%;
   font-size: 1.5em;
   background: rgba(1,1,1,0.5);
+  top: 0;
+  bottom: 0;
 }
 body header .menu div {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 body header .menu div:last-child {
   margin-bottom: 0;
-}
-body header .menu div:hover a {
-  color: #60f2ff;
-  cursor: default;
-  text-decoration: none;
 }
 body header .menu div.link {
   text-shadow: 1px 1px 1px #3b3b3b;
@@ -447,6 +467,17 @@ body header .menu div.link.contact {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
+body header .menu div.link a {
+  text-decoration: none;
+}
+body header .menu i.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+body header .menu i:hover {
+  color: #60f2ff;
+}
 body div.shade {
   display: none;
   position: fixed;
@@ -461,4 +492,28 @@ body div.shade {
   -ms-animation: fade 500ms;
   -o-animation: fade 500ms;
   animation: fade 500ms;
+}
+body.green .menu .link:hover a {
+  color: #43ed43;
+}
+body.green .menu i:hover {
+  color: #43ed43;
+}
+body.blue .menu .link:hover a {
+  color: #0c9aff;
+}
+body.blue .menu i:hover {
+  color: #0c9aff;
+}
+body.red .menu .link:hover a {
+  color: #ff4229;
+}
+body.red .menu i:hover {
+  color: #ff4229;
+}
+body.pink .menu .link:hover a {
+  color: #ff19f3;
+}
+body.pink .menu i:hover {
+  color: #ff19f3;
 }

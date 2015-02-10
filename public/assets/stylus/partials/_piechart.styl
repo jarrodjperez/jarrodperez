@@ -1,43 +1,69 @@
-.pie {
-    position: relative;
-    display: inline-block;
-    margin: 5px;
+piechart {
+    .pie {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
 
-    .master, .inner {
-      border: 5px solid whitesmoke;
-    }
+        .master, .inner {
+          border: 5px solid whitesmoke;
+        }
 
-    .inner {
-      border-color: #60F2FF;
-    }
+        .inner {
+          border-color: #60F2FF;
+        }
 
-    .master, .slice, .inner {
-      border-radius: 100%;
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
+        .master, .slice, .inner {
+          border-radius: 100%;
+          box-sizing: border-box;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
 
-    .cover {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        bottom: 5px;
-        right: 5px;
-        overflow: hidden;
-        border-radius: 100%;
-
-        .content {
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 16px;
+        .cover {
             position: absolute;
-            width: 100%;
-            top: 50%;
-            margin-top: -10px;
+            top: 5px;
+            left: 5px;
+            bottom: 5px;
+            right: 5px;
+            overflow: hidden;
+            border-radius: 100%;
+
+            .content {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 16px;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                margin-top: -10px;
+            }
         }
     }
+}
+
+body.green .pie {
+    .master { border-color: darken($green, 60%); }
+    .inner { border-color: $green; }
+    .cover:hover { .content { color: $green; } }
+}
+
+body.red .pie {
+    .master { border-color: darken($red, 60%); }
+    .inner { border-color: $red; }
+    .cover:hover { .content { color: $red; } }
+}
+
+body.blue .pie {
+    .master { border-color: darken($blue, 60%); }
+    .inner { border-color: $blue; }
+    .cover:hover { .content { color: $blue; } }
+}
+
+body.pink .pie {
+    .master { border-color: darken($pink, 60%); }
+    .inner { border-color: $pink; }
+    .cover:hover { .content { color: $pink; } }
 }
