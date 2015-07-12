@@ -1,52 +1,85 @@
 #skills {
-	padding: 100px 0px 190px 0px;
+    padding: 100px 0px 190px 0px;
 
-	.container {
-		text-align: center;
+    .container {
+        text-align: center;
 
-		h1 {
-			font-size: 1.8em;
-			margin-bottom: 45px;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-		}
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 45px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
 
-		.skill-section {
-			float: left;
-			width: 50%;
+        .skill-section {
+            float: left;
+            width: 50%;
 
-			.main {
-				.content {
-					font-size: 20px;
-				}
-			}
+            .main {
+                .content {
+                    font-size: 20px;
+                }
+            }
 
-			.skill {
-				display: inline-block;
-				position: relative;
+            .progress-holder {
+                padding: 5px;
 
-				.subskills {
-					position: absolute;
-					display: none;
-					width: 500px;
-					left: -185px;
-					top: 135px;
+                .progress {
+                    border-radius: 0px;
+                }
 
-					.subskill {
-						display: inline-block;
+                .tier2-skill {
+                    text-align: left;
+                    
+                    .tier2-title {
+                        margin-bottom: 10px;                    
+                    }
 
-						.inner {
-							border-color: rgb(255, 0, 235);
-						}
-					}
-				}
-			}
+                    .tier3-skill {
 
-			.skill:hover {
-				.subskills {
-					display: inline-block;
-				}
-			}
-		}
-	}
+                        .tier3-title {
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                        }
+
+                        .progress {
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.green .skill-section .progress .progress-bar {
+    background-color: darken($green, 60%);
+}
+
+body.green .skill-section .progress .subskill {
+    background-color: $green;
+}
+
+body.red .skill-section .progress .progress-bar {
+    background-color: darken($red, 60%);
+}
+
+body.red .skill-section .progress .subskill {
+    background-color: $red;
+}
+
+body.blue .skill-section .progress .progress-bar {
+    background-color: darken($blue, 60%);
+}
+
+body.blue .skill-section .progress .subskill {
+    background-color: $blue;
+}
+
+body.pink .skill-section .progress .progress-bar {
+    background-color: darken($pink, 60%);
+}
+
+body.pink .skill-section .progress .subskill {
+    background-color: $pink;
 }

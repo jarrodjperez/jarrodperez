@@ -351,25 +351,48 @@ body.pink .pie .cover:hover .content {
 #skills .container .skill-section .main .content {
   font-size: 20px;
 }
-#skills .container .skill-section .skill {
-  display: inline-block;
-  position: relative;
+#skills .container .skill-section .progress-holder {
+  padding: 5px;
 }
-#skills .container .skill-section .skill .subskills {
-  position: absolute;
-  display: none;
-  width: 500px;
-  left: -185px;
-  top: 135px;
+#skills .container .skill-section .progress-holder .progress {
+  border-radius: 0px;
 }
-#skills .container .skill-section .skill .subskills .subskill {
-  display: inline-block;
+#skills .container .skill-section .progress-holder .tier2-skill {
+  text-align: left;
 }
-#skills .container .skill-section .skill .subskills .subskill .inner {
-  border-color: #ff00eb;
+#skills .container .skill-section .progress-holder .tier2-skill .tier2-title {
+  margin-bottom: 10px;
 }
-#skills .container .skill-section .skill:hover .subskills {
-  display: inline-block;
+#skills .container .skill-section .progress-holder .tier2-skill .tier3-skill .tier3-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+#skills .container .skill-section .progress-holder .tier2-skill .tier3-skill .progress {
+  height: 10px;
+}
+body.green .skill-section .progress .progress-bar {
+  background-color: #0b6f0b;
+}
+body.green .skill-section .progress .subskill {
+  background-color: #43ed43;
+}
+body.red .skill-section .progress .progress-bar {
+  background-color: #760e00;
+}
+body.red .skill-section .progress .subskill {
+  background-color: #ff4229;
+}
+body.blue .skill-section .progress .progress-bar {
+  background-color: #003e6b;
+}
+body.blue .skill-section .progress .subskill {
+  background-color: #0c9aff;
+}
+body.pink .skill-section .progress .progress-bar {
+  background-color: #70006a;
+}
+body.pink .skill-section .progress .subskill {
+  background-color: #ff19f3;
 }
 #contact {
   background: #363636;
@@ -392,7 +415,7 @@ body.pink .pie .cover:hover .content {
   list-style: none;
 }
 #contact .container .icons ul li {
-  padding: 0px 30px;
+  padding: 0px 25px;
   display: inline;
 }
 #contact .container .icons ul li a {
@@ -426,12 +449,16 @@ body header .nav-container {
   -webkit-animation-delay: 0s;
 }
 body header .nav-container .pie {
+  opacity: 0.3;
   transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
 }
 body header .nav-container .pie .cover .content {
   color: #fff;
   text-shadow: 1px 1px 1px #3b3b3b;
+}
+body header .nav-container .pie:hover {
+  opacity: 1;
 }
 body header .menu {
   display: none;
@@ -454,6 +481,7 @@ body header .menu div:last-child {
 }
 body header .menu div.link {
   text-shadow: 1px 1px 1px #3b3b3b;
+  font-size: 40px;
 }
 body header .menu div.link.about {
   animation-delay: 0.1s;

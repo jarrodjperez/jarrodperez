@@ -97,6 +97,10 @@ myApp.controller('mainCtrl', function($scope, $location, anchorSmoothScroll, $wi
 		]}
 	];
 
+    $scope.toggleSubSkills = function (skillObj) {
+        skillObj.showSubSkills = !skillObj.showSubSkills;
+    };
+
 	$scope.goTo = function(section) {
         anchorSmoothScroll.scrollTo(section);
     };

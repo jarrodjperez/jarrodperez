@@ -1,19 +1,28 @@
 <section id="skills">
-	<div class="container">
-		<h1 animation="fadeInDown" in-viewport>Skills</h1>
+    <div class="container">
+        <h1 animation="fadeInDown" in-viewport>Skills</h1>
 
-		<div class="skill-tree">
-			<div class="skill-section" ng-repeat="tier1 in skillTree" in-viewport animation="{{$index == 1 ? 'fadeInRight' : 'fadeInLeft'}}">
-				<piechart class="main" size="getCirleWidth(6, 150)", value="tier1.value" label="{{tier1.name}}"></piechart>
-				<!-- <br />
-				<div class="skill" ng-repeat="tier2 in tier1.skills">
-					<piechart size="getCirleWidth(10, 50)" value="tier2.value" label="{{tier2.skill}}"></piechart>
-					<div class="subskills animated fadeInDown">
-						<div class="subskill" ng-repeat="tier3 in tier2.subSkills">
-							<piechart size="getCirleWidth(12, 100)" value="tier3.value" label="{{tier3.subSkill}}"></piechart>
-						</div>
-					</div>
-				</div> -->
-			</div>
-	</div>
+        <div class="skill-tree">
+            <div class="skill-section" ng-repeat="tier1 in skillTree" in-viewport animation="{{$index == 1 ? 'fadeInRight' : 'fadeInLeft'}}" ng-init="skillIndex = $index">
+                <piechart class="main" size="getCirleWidth(6, 150)", value="tier1.value" label="{{tier1.name}}"></piechart>
+                <br />
+                <div class="progress-holder">
+                    <div class="tier2-skill" ng-repeat="tier2 in tier1.skills" ng-click="toggleSubSkills(skillTree[skillIndex]['skills'][$index])" ng-init="subSkillIndex = $index">
+                        <div class="tier2-title">{{ tier2.skill | uppercase}}</div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="tier2.value" aria-valuemin="0" aria-valuemax="100" style="width: {{tier2.value}}%">
+                            </div>
+                        </div>
+
+                        <div ng-show="skillTree[skillIndex]['skills'][subSkillIndex].showSubSkills" class="tier3-skill" ng-repeat="tier3 in tier2.subSkills">
+                            <div class="tier3-title"><i class="fa fa-arrow-circle-o-right"></i>&nbsp; {{ tier3.subSkill | uppercase }}</div>
+                            <div class="progress">
+                                <div class="progress-bar subskill" role="progressbar" aria-valuenow="tier3.value" aria-valuemin="0" aria-valuemax="100" style="width: {{tier3.value}}%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 </section>
