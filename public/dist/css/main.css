@@ -316,7 +316,7 @@ body.pink .pie .cover:hover .content {
   height: 200px;
   margin-bottom: 45px;
   border-radius: 150px;
-  border: 4px solid #3a3a3a;
+  border: 4px solid #d8d8d8;
 }
 #about .container h1 {
   font-size: 1.8em;
@@ -482,6 +482,7 @@ body header .menu div:last-child {
 body header .menu div.link {
   text-shadow: 1px 1px 1px #3b3b3b;
   font-size: 40px;
+  cursor: pointer;
 }
 body header .menu div.link.about {
   animation-delay: 0.1s;
@@ -499,9 +500,11 @@ body header .menu div.link a {
   text-decoration: none;
 }
 body header .menu i.close-menu {
+  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  font-size: 30px;
 }
 body header .menu i:hover {
   color: #60f2ff;

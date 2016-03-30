@@ -10,7 +10,7 @@
                     <div class="tier2-skill" ng-repeat="tier2 in tier1.skills" ng-click="toggleSubSkills(skillTree[skillIndex]['skills'][$index])" ng-init="subSkillIndex = $index">
                         <div class="tier2-title">{{ tier2.skill | uppercase}}</div>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="tier2.value" aria-valuemin="0" aria-valuemax="100" style="width: {{tier2.value}}%">
+                            <div class="progress-bar progress-bar active" role="progressbar" aria-valuenow="tier2.value" aria-valuemin="0" aria-valuemax="100" style="width: {{tier2.value}}%">
                             </div>
                         </div>
 
