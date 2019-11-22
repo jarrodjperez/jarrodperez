@@ -15,6 +15,16 @@ const Timeline: React.FC = () => {
                     <i className="fa fa-building"></i>
                 </div>
                 <div className="timeline-content">
+                    <p className="heading">September 2019</p>
+                    <p>Infura</p>
+                    <p>Software Engineer</p>
+                </div>
+            </div>
+            <div className="timeline-item" data-aos="fade-in">
+                <div className="timeline-marker is-icon">
+                    <i className="fa fa-building"></i>
+                </div>
+                <div className="timeline-content">
                     <p className="heading">December 2012</p>
                     <p>Sony Playstation</p>
                     <p>Senior UX Engineer</p>
