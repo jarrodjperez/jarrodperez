@@ -1,0 +1,31 @@
+---
+import { identity, links } from '../data/resume';
+---
+
+<header>
+  <h1>{identity.name}</h1>
+  <p class="tagline">{identity.tagline}</p>
+  <nav aria-label="Profiles">
+    {links.map((link) => <a href={link.href}>{link.label}</a>)}
+  </nav>
+</header>
+
+<style>
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .tagline {
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+
+  nav {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+  }
+</style>
