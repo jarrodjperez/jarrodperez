@@ -43,7 +43,7 @@ a:hover {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
   border-bottom: 1px solid var(--rule);
   padding-bottom: 0.4rem;
 }
