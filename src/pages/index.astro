@@ -1,11 +1,8 @@
 ---
+import Base from '../layouts/Base.astro';
+import { meta } from '../data/resume';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Jarrod Perez</title>
-  </head>
-  <body>
-    <h1>Jarrod Perez</h1>
-  </body>
-</html>
+
+<Base title={meta.title} description={meta.description}>
+  <h1>Jarrod Perez</h1>
+</Base>
