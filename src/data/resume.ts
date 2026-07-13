@@ -18,12 +18,12 @@ export const identity = {
 export const meta = {
   title: 'Jarrod Perez — Full Stack Product Engineer',
   description:
-    'Founding engineer at Summer. Product engineer with design roots who leads front-end teams and ships AI-native software — web apps, APIs, and MCP apps — end to end.',
+    'Founding engineer at Summer. Product engineer with design roots who leads front-end teams and ships AI-native software end to end.',
 };
 
 export const intro: string[] = [
-  "I'm a founding engineer at Summer, where I build and lead the front end: our web apps, public APIs, and MCP apps. Shipping LLM-native software — tools that people and AI agents both use — is the most interesting problem I've found in nearly twenty years of building for the web.",
-  'I started in design and spent years as a UX engineer at PlayStation before moving deeper into engineering, leading front-end teams at Infura and now Summer. That mix is still how I work: end to end, from idea to production.',
+  "I'm a founding engineer at Summer, where I build and lead the front end. That covers our web apps, our public APIs, and the MCP apps that let AI agents use our products. Making software that works for people and AI agents alike is the most interesting problem I've found in nearly twenty years of building for the web.",
+  'I started in design, spent years as a UX engineer at PlayStation, and moved deeper into engineering leading front-end teams at Infura and now Summer. That mix is still how I work. I like taking an idea from the first sketch all the way to production.',
 ];
 
 export const links: Link[] = [
