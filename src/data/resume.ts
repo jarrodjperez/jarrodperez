@@ -23,7 +23,7 @@ export const meta = {
 
 export const intro: string[] = [
   "I'm a founding engineer at Summer, where I build and lead the front end. That covers our web apps, our public APIs, and the MCP apps that let AI agents use our products. Making software that works for people and AI agents alike is the most interesting problem I've found in nearly twenty years of building for the web.",
-  'I started in design, spent years as a UX engineer at PlayStation, and moved deeper into engineering leading front-end teams at Infura and now Summer. That mix is still how I work. I like taking an idea from the first sketch all the way to production.',
+  'I started in design, spent years as a UX engineer at PlayStation, and moved deeper into engineering leading front-end teams at Infura and now Summer. That mix is still how I work. I like taking an idea from the first prototype all the way to production.',
 ];
 
 export const links: Link[] = [
