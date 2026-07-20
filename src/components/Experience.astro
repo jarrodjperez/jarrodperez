@@ -15,7 +15,6 @@ import { experience } from '../data/resume';
             </span>
             <span class="dates">{entry.dates}</span>
           </div>
-          {entry.detail && <p class="detail">{entry.detail}</p>}
         </li>
       ))
     }
@@ -54,11 +53,5 @@ import { experience } from '../data/resume';
     color: var(--muted);
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
-  }
-
-  .detail {
-    color: var(--muted);
-    font-size: 0.875rem;
-    margin-top: 0.2rem;
   }
 </style>

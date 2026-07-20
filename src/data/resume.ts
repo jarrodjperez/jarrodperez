@@ -7,7 +7,6 @@ export interface Entry {
   org: string;
   role: string;
   dates: string;
-  detail?: string;
 }
 
 export const identity = {
@@ -33,12 +32,7 @@ export const links: Link[] = [
 ];
 
 export const experience: Entry[] = [
-  {
-    org: 'Summer',
-    role: 'Founding Engineer',
-    dates: '2022–present',
-    detail: 'Leads front end across web apps, public APIs, and MCP apps.',
-  },
+  { org: 'Summer', role: 'Founding Engineer', dates: '2022–present' },
   { org: 'Infura', role: 'Front End Lead', dates: '2019–2022' },
   { org: 'Sony PlayStation', role: 'Senior UX Engineer', dates: '2012–2019' },
   { org: 'Markit on Demand', role: 'Senior Software Engineer', dates: '2008–2012' },
