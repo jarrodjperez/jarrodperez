@@ -1,0 +1,57 @@
+---
+import { experience } from '../data/resume';
+---
+
+<section aria-label="Experience">
+  <h2 class="section-label">Experience</h2>
+  <ul>
+    {
+      experience.map((entry) => (
+        <li>
+          <div class="row">
+            <span>
+              <strong>{entry.org}</strong>
+              <span class="role">{entry.role}</span>
+            </span>
+            <span class="dates">{entry.dates}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  section {
+    margin-top: 3rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  li + li {
+    margin-top: 0.85rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .role {
+    color: var(--muted);
+    margin-left: 0.5rem;
+  }
+
+  .dates {
+    color: var(--muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

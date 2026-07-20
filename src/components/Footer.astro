@@ -1,0 +1,29 @@
+---
+import { links } from '../data/resume';
+---
+
+<footer>
+  {
+    links.map((link, i) => (
+      <>
+        {i > 0 && <span class="sep">·</span>}
+        <a href={link.href}>{link.label}</a>
+      </>
+    ))
+  }
+</footer>
+
+<style>
+  footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  .sep {
+    margin: 0 0.5rem;
+    color: var(--faint);
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Intro from '../components/Intro.astro';
+import Experience from '../components/Experience.astro';
+import Footer from '../components/Footer.astro';
+import { meta } from '../data/resume';
+---
+
+<Base title={meta.title} description={meta.description}>
+  <Header />
+  <main>
+    <Intro />
+    <Experience />
+  </main>
+  <Footer />
+</Base>

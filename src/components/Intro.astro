@@ -1,0 +1,24 @@
+---
+import { intro } from '../data/resume';
+---
+
+<section aria-label="Introduction">
+  {intro.map((paragraph) => <p>{paragraph}</p>)}
+</section>
+
+<style>
+  section {
+    margin-top: 2.5rem;
+  }
+
+  p {
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+</style>
